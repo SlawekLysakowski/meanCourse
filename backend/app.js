@@ -8,7 +8,9 @@ const app = express();
 
 mongoose
   .connect(
-    'mongodb+srv://Admin:Sup3rT4jn3H4slo@meancluster.knbawrj.mongodb.net/?retryWrites=true&w=majority'
+    'mongodb+srv://Admin:' +
+      process.env.PASSWORD +
+      ' @meancluster.knbawrj.mongodb.net/?retryWrites=true&w=majority'
   )
   .then(() => {
     console.log('Connected to database');
