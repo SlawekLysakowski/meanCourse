@@ -9,14 +9,16 @@ import { PostsService } from '../posts.service';
   styleUrls: ['./post-create.component.css'],
 })
 export class PostCreateComponent {
-  constructor(public postaService: PostsService) {}
   enteredTitle = '';
   enteredContent = '';
 
-  onAddPost(form: NgForm) {
-    if (form.invalid) return;
+  constructor(public postsService: PostsService) {}
 
-    this.postaService.addPost(form.value.title, form.value.content);
+  onAddPost(form: NgForm) {
+    if (form.invalid) {
+      return;
+    }
+    this.postsService.addPost(form.value.title, form.value.content);
     form.resetForm();
   }
 }
