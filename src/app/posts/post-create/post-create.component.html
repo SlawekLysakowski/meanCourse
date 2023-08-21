@@ -1,8 +1,9 @@
 <mat-card>
-  <form (submit)="onAddPost(postForm)" #postForm="ngForm">
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+  <form (submit)="onSavePost(postForm)" #postForm="ngForm" *ngIf="!isLoading">
     <mat-form-field>
       <input
-        ngModel
+        [ngModel]="post?.title"
         matInput
         #title="ngModel"
         name="title"
@@ -19,7 +20,7 @@
         matNativeControl
         rows="4"
         name="content"
-        ngModel
+        [ngModel]="post?.content"
         required
         placeholder="Post content"
         #content="ngModel"

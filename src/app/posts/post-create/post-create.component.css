@@ -11,3 +11,7 @@ textarea {
 #btn {
   width: 6rem;
 }
+
+mat-spinner {
+  margin: auto;
+}
