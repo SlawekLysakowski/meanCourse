@@ -1,6 +1,6 @@
 ul {
   list-style: none;
-  padding: 0 5 rem;
+  padding: 0 5rem;
   margin: 0;
 }
 
@@ -11,6 +11,10 @@ a {
 
 .accent {
   background-color: rgb(137, 108, 210);
+}
+
+ul {
+  display: flex
 }
 
 /* .spacer {
