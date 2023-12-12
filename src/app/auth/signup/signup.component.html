@@ -12,7 +12,9 @@
         required
         email
       />
-      <mat-error *ngIf="emailInput.invalid"> please enter a valid email </mat-error>
+      <mat-error *ngIf="emailInput.invalid">
+        please enter a valid email
+      </mat-error>
     </mat-form-field>
 
     <mat-form-field>
@@ -24,12 +26,19 @@
         ngModel
         #passwordInput="ngModel"
         required
-      >
+      />
 
       <mat-error *ngIf="passwordInput.invalid">
         please enter a valid password
       </mat-error>
     </mat-form-field>
-    <button mat-raised-button="accent" color="primary" type="submit" *ngIf="!isLoading">Signup</button>
+    <button
+      mat-raised-button="accent"
+      color="primary"
+      type="submit"
+      *ngIf="!isLoading"
+    >
+      Signup
+    </button>
   </form>
 </mat-card>
